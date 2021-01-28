@@ -13,49 +13,56 @@
 <body>
 
    <section>
-      <div class="container">
+      <div class="container bg-success bg-gradient">
          <div class="cart">
             <div class="col-md-12 col-lg-10 mx-auto">
-               <div class="cart-item">
+               <div class="cart-item bg-secondary bg-gradient text-white">
                   <div class="row">
                      <div class="col-md-7 center-item">
-                        <img src="images/product-1.png" alt="">
+                        <img class="bg-white" src="images/product-1.png" alt="">
                         <h5>iPhone 11 128GB Black</h5>
                      </div>
 
                      <div class="col-md-5 center-item">
                         <div class="input-group number-spinner">
-                           <button id="sellMinus" class="btn btn-default"><i class="fas fa-minus"></i></button>
-                           <input id="countPlus" type="text" class="form-control text-center" value="1">
-                           <button id="sellPlus" class="btn btn-default"><i class="fas fa-plus"></i></button>
+                           <button onclick="handlerItemChange('phone',false)" class="btn btn-danger"><i
+                                 class="fas fa-minus"></i></button>
+                           <input id="phone-count" type="text" class="form-control text-center" value="1">
+                           <!-- use id  -->
+                           <!-- <button id="phone-increase" class="btn btn-default"><i class="fas fa-plus"></i></button> -->
+                           <!-- use Function  -->
+                           <button onclick="handlerItemChange('phone',true);" class="btn btn-dark"><i
+                                 class="fas fa-plus"></i></button>
                         </div>
-                        <h5>$1219</h5>
+                        <h5 id="phone-total">$1219</h5>
                         <img src="images/remove.png" alt="" class="remove-item">
                      </div>
                   </div>
                </div>
 
-               <div class="cart-item">
-                  <div class="row">
+               <div class="cart-item bg-danger bg-gradient text-white">
+                  <div class="row"> 
                      <div class="col-md-7 center-item mx-auto">
                         <img src="images/product-2.png" alt="">
                         <h5>iPhone 11 Silicone Case - Black</h5>
                      </div>
                      <div class="col-md-5 center-item">
                         <div class="input-group number-spinner">
-                           <button class="btn btn-default"><i class="fas fa-minus"></i></button>
-                           <input type="text" class="form-control text-center" value="1">
-                           <button class="btn btn-default"><i class="fas fa-plus"></i></button>
+                           <button onclick=" handlerItemChange('case', false)" class="btn btn-info"><i
+                                 class="fas fa-minus"></i></button>
+                           <input id="case-count" type="text" class="form-control text-center" value="1">
+                           <!-- <butto id="case-add" class="btn btn-default"><i class="fas fa-plus"></i></button> -->
+                           <button onclick="handlerItemChange('case',true)" class="btn btn-success"><i
+                                 class="fas fa-plus"></i></button>
 
                         </div>
-                        <h5>$59</h5>
+                        <h5 id="case-total">$59</h5>
                         <img src="images/remove.png" alt="" class="remove-item">
                      </div>
-                     <h2></h2>
                   </div>
                </div>
 
-               <div class="cart-item">
+               <div class="cart-item bg-info bg-gradient text-dark">
                   <div class="row">
 
                      <div class="col-md-8">
@@ -65,30 +72,19 @@
                      </div>
 
                      <div class="col-md-4 status">
-                        <h5>$1,278</h5>
-                        <h5>$0</h5>
-                        <h5>$1,278</h5>
+                        <h5 id="total-price">$1,278</h5>
+                        <h5 id="tex">$0</h5>
+                        <h5 id="grand-total">$</h5>
                      </div>
                   </div>
                </div>
                <div class="col-md-12 pt-4 pb-4">
-                  <button type="button" class="btn btn-success check-out">Check Out</button>
+                  <button type="button" class="btn btn-outline-success check-out">Check Out</button>
                </div>
             </div>
          </div>
       </div>
    </section>
-
-
-
-
-
-
-
-
-
-
-
 
 
 
